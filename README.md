@@ -21,7 +21,7 @@ A simulation output of sim is created as the output file . To generate the timin
 vvp sim
 ```
 
-If we wish to simulate simple_dual_port_ram , then following command is given
+If we wish to simulate single cycle cpu, then following command is given
 ```
 gtkwave .\single_cycle_cpu_waveform.vcd
 ```
