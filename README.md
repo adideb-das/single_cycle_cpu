@@ -3,7 +3,7 @@
 
 Single-cycle MIPS processor is a simplified design where all instruction stages (fetch, decode, register read, ALU operation, memory access, write back) are completed in one clock cycle.
 
-
+![block diagram](single_cycle_cpu.png)
 The memory address has been provided in the ```memfile.hex``` and can be visible in the ```rd_instr``` of the timing diagram.
 
 
