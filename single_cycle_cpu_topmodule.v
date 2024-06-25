@@ -1,18 +1,7 @@
-`include "pc.v"
-`include "instr_memory.v"
-`include "register_file.v"
-`include "sign_extend.v"
-`include "alu.v"
-`include "control_unit_top.v"
-`include "data_memory.v"
-`include "pc_adder.v"
-`include "mux.v"
-
-
-module single_cycle_cpu_topmodule(clk,rst);
+module single_cycle_cpu_topmodule(clk,rst,data_out);
 
     input clk,rst;
-
+    output [31:0]data_out;
     wire [31:0] pc_top,rd_instr,rd1_top,imm_ext_top,aluresult,readdata,pcplus4,rd2_top,srcb,result;
     wire regwrite,memwrite,alusrc,resultsrc;
     wire [1:0]immsrc;
@@ -102,5 +91,5 @@ module single_cycle_cpu_topmodule(clk,rst);
                             .s(resultsrc),
                             .c(result)
     );
-
+    assign data_out=result;
 endmodule
